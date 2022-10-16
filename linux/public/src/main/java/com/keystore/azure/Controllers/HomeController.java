@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    String message = "java-keystore-examples-private";
+    String message = "java-keystore-examples-public";
 
     @GetMapping("/")
     public String index() {
