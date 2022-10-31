@@ -28,42 +28,4 @@
       <scope>test</scope> 
     </dependency> 
   </dependencies>  
-  <build> 
-    <plugins> 
-      <plugin> 
-        <groupId>org.springframework.boot</groupId>  
-        <artifactId>spring-boot-maven-plugin</artifactId> 
-      </plugin>  
-      <plugin>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>2.5.0</version>
-        <configuration>
-          <schemaVersion>v2</schemaVersion>
-          <subscriptionId>4388fa06-bf66-4497-82c2-991ba75ecb97</subscriptionId>
-          <resourceGroup>ansalemo-rg</resourceGroup>
-          <appName>ansalemo-java-public-cert</appName>
-          <pricingTier>B1</pricingTier>
-          <region>eastus</region>
-          <appServicePlanName>ansalemo-asp</appServicePlanName>
-          <appServicePlanResourceGroup>ansalemo-rg</appServicePlanResourceGroup>
-          <runtime>
-            <os>Linux</os>
-            <javaVersion>Java 11</javaVersion>
-            <webContainer>Java SE</webContainer>
-          </runtime>
-          <deployment>
-            <resources>
-              <resource>
-                <directory>${project.basedir}/target</directory>
-                <includes>
-                  <include>*.jar</include>
-                </includes>
-              </resource>
-            </resources>
-          </deployment>
-        </configuration>
-      </plugin>
-    </plugins> 
-  </build> 
 </project>
